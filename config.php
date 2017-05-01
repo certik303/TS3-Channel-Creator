@@ -21,5 +21,5 @@ $imprint_url = "";
 $badwords = array("example", "example");
 
 // Allowed groups whitelist
-$allowed_groups = array();
+$allowed_groups = array(); // Use group IDs (12,13,16)
 ?>
