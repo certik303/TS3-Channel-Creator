@@ -76,10 +76,10 @@ if($resp->isSuccess()) {
 			$ts3_VirtualServer->selfUpdate(array('client_nickname'=> $ts3_nick));
 
 			$client = $ts3_VirtualServer->clientGetByUid($request->uuid);
-			$groups = $client["client_servergroups"];
+			$groups = $groups = explode(',', (string)$client->client_servergroups);
 			$group_matches = 0;
 
-			foreach($allowed_groups as $g)
+			foreach($groups as $g)
 			{
 				if(in_array($g, $allowed_groups))
 				{
